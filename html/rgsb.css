@@ -1,0 +1,90 @@
+body {
+  font-family: "Bitstream Vera Sans", Verdana, Helvetica, sans-serif;
+  color: black;
+  background-color: white;
+  margin: 0em;
+  padding: 0em;
+}
+
+img {
+  border: 0px;
+}
+
+.body {
+  margin: 0.5em;
+  padding: 0.5em;
+  width: 70%;
+}
+
+.entry {
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+.content {
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+#header, .body h2, .entry h3 {
+  font-family: "Bitstream Vera Sans Mono", lucidatypewriter, "Lucida Sans Unicode", monospaced;
+  margin: 0em;
+  padding: 0em;
+}
+
+#header, .body h2 {
+  color: white;
+  background-color: black;
+}
+
+.entry h3 {
+  color: black;
+  background-color: #f0f0f0;
+}
+
+#header h1, #header p {
+  margin: 0em;
+  padding: 0em;
+}
+
+#footer {
+  color: black;
+  background-color: #f0f0f0;
+  margin: 0em;
+  padding: 0em;
+  border-top: 1px solid black;
+  font-size: smaller;
+}
+
+#footer p, #footer blockquote {
+  margin: 0em;
+  padding: 0em;
+}
+
+#footer blockquote {
+  padding-left: 0.5em;
+  float: left;
+}
+
+#footer p {
+  padding-right: 0.5em;
+  float: right;
+}
+
+#sidebar {
+  color: black;
+  background-color: #f0f0f0;
+  position: absolute;
+  top: 8em;
+  right: 0em;
+  width: 28%;
+}
+
+.meta {
+  font-size: smaller;
+  text-align: right;
+}
+
+.face {
+  float: right;
+}

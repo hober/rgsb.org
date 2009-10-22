@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+          "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title><TMPL_VAR name></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="<TMPL_VAR generator>" />
+    <link rel="stylesheet" type="text/css" href="rgsb.css">
+    <link rel="alternate" type="application/atom+xml"
+          href="atom.xml" title="Atom feed of the most recent entries">
+  </head>
+
+  <body>
+    <div id="header">
+      <h1><TMPL_VAR name></h1>
+      <p>aggregating inane blather since 1989</p>
+    </div>
+
+    <div class="body">
+      <TMPL_LOOP Items>
+        <TMPL_IF new_date>
+          <h2><TMPL_VAR new_date></h2>
+        </TMPL_IF>
+        <div class="entry">
+          <h3>
+            <TMPL_IF link>
+              <a href="<TMPL_VAR channel_link ESCAPE="HTML">"
+                 title="<TMPL_VAR channel_title ESCAPE="HTML">"
+               ><TMPL_VAR channel_name></a>: <a
+                  href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_IF title><TMPL_VAR title><TMPL_ELSE>Untitled</TMPL_IF></a>
+            <TMPL_ELSE>
+              <a href="<TMPL_VAR channel_link ESCAPE="HTML">"
+                 title="<TMPL_VAR channel_title ESCAPE="HTML">"
+               ><TMPL_VAR channel_name></a>:
+               <TMPL_IF title><TMPL_VAR title><TMPL_ELSE>Untitled</TMPL_IF>
+            </TMPL_IF>
+          </h3>
+          <div class="content">
+            <TMPL_IF content>
+              <TMPL_IF channel_face>
+                <a href="<TMPL_VAR channel_link ESCAPE="HTML">"
+                 ><img class="face"
+                       src="<TMPL_VAR channel_face ESCAPE="HTML">"
+                       alt=""></a>
+              </TMPL_IF>
+              <TMPL_VAR content>
+              <TMPL_ELSE>
+              <p><a href="<TMPL_VAR link ESCAPE="HTML">"><TMPL_IF title><TMPL_VAR title><TMPL_ELSE>Untitled</TMPL_IF></a></p>
+            </TMPL_IF>
+          </div>
+          <p class="meta">
+            posted <TMPL_IF creator>by <TMPL_VAR creator></TMPL_IF>
+                   at <TMPL_VAR date>.
+          </p>
+        </div>
+      </TMPL_LOOP>
+    </div>
+
+    <div id="sidebar">
+      <h2>About</h2>
+      <p>
+        <TMPL_VAR name> is a meta-blog of former denizens of
+        <tt>rhit.gas.stations.bigfoot</tt>, <a
+        href="http://www.rose-hulman.edu/">Rose-Hulman</a>'s premier
+        off-beat Usenet newsgroup dedicated to its most honored <a
+        href="http://rgsb.org/bigfoot/bigfoot.html">gas station</a>.
+      </p>
+      <p>
+        If you'd like your feed to be included, tell Ted by replying to
+        <a href="http://www.livejournal.com/community/rgsb/484.html"
+        >this post</a>.
+      </p>
+      <h2>Subscriptions</h2>
+      <p>
+        This list is available in <a href="foafroll.xml">FOAF</a> and <a
+        href="opml.xml">OPML</a> as well.
+      </p>
+      <ul>
+        <TMPL_LOOP Channels>
+          <li>
+            <TMPL_IF aurl>
+              <a href="<TMPL_VAR aurl ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a>
+              <TMPL_ELSE>
+              <TMPL_IF link>
+                <a href="<TMPL_VAR link ESCAPE="HTML">" title="<TMPL_VAR title ESCAPE="HTML">"><TMPL_VAR name></a>
+                <TMPL_ELSE>
+                <TMPL_VAR name>
+              </TMPL_IF>
+            </TMPL_IF>
+          </li>
+        </TMPL_LOOP>
+      </ul>
+      <h2>Feeds</h2>
+      <ul>
+        <li> <a href="atom.xml">Atom 1.0</a></li>
+      </ul>
+      <h2>Last Update</h2>
+      <p>
+        <TMPL_VAR date> GMT
+      </p>
+    </div>
+
+    <div id="footer">
+      <blockquote cite="Dan Moore, in RGSB">
+        No sleep, go away!<br>
+        Walked all the way to Bigfoot<br>
+        All drank crack root beer
+      </blockquote>
+      <p>
+        powered by
+        <a href="http://www.planetplanet.org/">Planet</a>,
+        <a href="http://httpd.apache.org/">Apache</a>,
+        and
+        <a href="http://www.freebsd.org/">FreeBSD</a>.
+
+        hosted on <a href="http://rakim.cfhp.org/">rakim.cfhp.org</a>.
+
+        &Omega;
+      </p>
+    </div>
+  </body>
+</html>

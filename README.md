@@ -9,4 +9,5 @@ a (now-defunct?) [Usenet][] [newsgroup][] at [Rose-Hulman][]. It runs
 [Usenet]: [Luis Fernandes]: http://www.ee.ryerson.ca/~elf/
 [newsgroup]: http://en.wikipedia.org/wiki/Usenet_newsgroup
 [Rose-Hulman]: http://www.rose-hulman.edu/
+[Planet Venus]: http://intertwingly.net/code/venus/
 [Edward O'Connor]: http://edward.oconnor.cx/
